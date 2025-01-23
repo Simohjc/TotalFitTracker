@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="description" content="TotalFitTracker, website that helps people track daily calories, calculate macros, BMI, body fat, and more...">
+    <meta property="og:title" content="TotalFitTracker | Health, Wellness, Fitness & Nutrition">
+    <meta property="og:description" content="Track daily calories, calculate macros, BMI, body fat.">
+    <meta property="og:image" content="/social-image.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/TotalFitTracker.png" />
+	<title>BMI Calculator</title>
+	<!-- CSS Files -->
+		
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/player/YTPlayer.css" />
+	<link href="css/pro-bars.css" rel="stylesheet" />
+	
+
+	<!-- End CSS Files -->
+ 
+</head>
+<body>
+    <!-- Navigation -->
+	<section id="navigation" class="dark-nav">
+		<!-- Navigation Inner -->
+		<div class="nav-inner">
+			<!-- Site Logo -->
+			<div class="site-logo fancy">
+				<a href="#" id="logo-text" class="scroll logo">TotalFitTracker
+				</a>
+			</div><!-- End Site Logo -->
+			<a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+			<!-- Navigation Menu -->
+		    <div class="nav-menu">
+				<ul class="nav uppercase">
+					<li><a href="index.html" class="scroll">Home</a></li>       
+					<li><a href="index.html" class="scroll">About us</a></li>
+					<li><a href="index.html" class="scroll">Tools</a></li>     
+					<li><a href="index.html" class="scroll">Testimonial</a></li>
+					<li><a href="index.html" class="scroll">Contact</a></li>
+				</ul>
+		  </div><!-- End Navigation Menu -->
+		</div><!-- End Navigation Inner -->
+	</section><!-- End Navigation Section -->
+
+
+	<!-- Home Section -->
+	<section id="home" class="relative"> 	
+		<div id="slides">
+			<div class="slides-container relative">
+				<!-- Slider Images -->
+				<div class="image2"></div>
+                <div class="image1"></div>
+				<div class="image3"></div>
+                <div class="image4"></div>
+				 <!-- End Slider Images -->	 
+			</div>
+			<!-- Slider Controls -->
+			<nav class="slides-navigation">
+			  <a href="#" class="next"></a>
+			  <a href="#" class="prev"></a>
+			</nav>
+		</div><!-- End Home Slides -->
+		<div class="v2 absolute">
+			<!-- Auto Typocraphic Texts -->
+			<div class="typographic">
+            	<!-- Your Logo -->
+				<div class="logo">
+					<!--<img src="images/Totalfittracker.png" width="100" alt="Logo" />-->
+				</div>
+				<h2 class=" condensed uppercase no-padding no-margin bold gray1">Track. Calculate. Transform.</h2>
+				<h2 class=" condensed uppercase no-padding no-margin bold colored">With TotalFitTracker. Start your journey today.</h2>
+				<a href="#about" class="scroll"><i class="arrow-down fa fa-3x fa-angle-double-down"></i></a>
+			</div><!--End Auto Typocraphic Texts -->
+		</div><!-- End V2 area -->
+	</section><!-- End Home Section -->
+
+
+	
+	<!-- Main Container (Flex layout for left, center, right) -->
+<!-- Main Container (Flex layout for left, center, right) -->
+<div class="main-container">
+	<!-- Left Box with BMI Introduction -->
+	<div class="left-box">
+	  <h1>BMI Introduction</h1>
+	  <p>
+		BMI is a measurement of a person's leanness or corpulence based on their height and weight, 
+		and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has 
+		a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used 
+		to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range 
+		the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes 
+		further divided into subcategories such as severely underweight or very severely obese. Being overweight or 
+		underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, 
+		it is a useful indicator of whether any additional testing or action is required. Refer to the table below to 
+		see the different categories based on BMI that are used by the calculator.
+	  </p>
+	</div>
+  
+	<!-- BMI Calculator Section (Centered) -->
+	
+	<div class="bmi-container">
+		<h1>BMI Calculator</h1>
+		<p>Body Mass Index (BMI) is a simple calculation using a person’s height and weight. It helps determine whether you are in a healthy weight range for your height.</p>
+  
+		<!-- Input Section -->
+		<div class="input-section">
+		  <h2>Enter Your Information</h2>
+  
+		  <!-- Unit Selection -->
+		  <div class="unit-selection">
+			<label>
+			  <input type="radio" name="unit" value="us" checked> US Units
+			</label>
+			<label>
+			  <input type="radio" name="unit" value="metric"> Metric Units
+			</label>
+		  </div>
+  
+		  <!-- US Units Form -->
+		  <div id="us-units" class="unit-form">
+			<!-- Age -->
+			<label for="us-age">Age:</label>
+			<input type="number" id="us-age" name="us-age" placeholder="Enter your age" required>
+	  
+			<!-- Gender -->
+			<label for="us-gender">Gender:</label>
+			<select id="us-gender">
+			  <option value="male">Male</option>
+			  <option value="female">Female</option>
+			</select>
+	  
+			<!-- Height -->
+			<label for="height-feet">Height:</label>
+			<div class="height-input">
+			  <input type="number" id="height-feet" name="height-feet" placeholder="Feet" required>
+			  <input type="number" id="height-inches" name="height-inches" placeholder="Inches" required>
+			</div>
+	  
+			<!-- Weight -->
+			<label for="us-weight">Weight (lbs):</label>
+			<input type="number" id="us-weight" name="us-weight" placeholder="Enter weight in pounds" required>
+		   </div>
+  
+		   <!-- Metric Units Form -->
+	       <div id="metric-units" class="unit-form" style="display: none;">
+		   <!-- Age -->
+		   <label for="metric-age">Age:</label>
+		   <input type="number" id="metric-age" name="metric-age" placeholder="Enter your age" required>
+  
+		   <!-- Gender -->
+		   <label for="metric-gender">Gender:</label>
+		   <select id="metric-gender">
+		  <option value="male">Male</option>
+		  <option value="female">Female</option>
+		  </select>
+  
+		  <!-- Height -->
+		  <label for="height-metric">Height (cm):</label>
+		  <input type="number" id="height-metric" name="height-metric" placeholder="Enter height in centimeters" required>
+  
+		  <!-- Weight -->
+		  <label for="metric-weight">Weight (kg):</label>
+		  <input type="number" id="metric-weight" name="metric-weight" placeholder="Enter weight in kilograms" required>
+	      </div>
+		  <!-- Buttons -->
+		  <div class="button-group">
+			<button id="calculate-button">Calculate BMI</button>
+			<button id="clear-button" type="button">Clear</button>
+		  </div>
+		</div>
+	</div>
+	
+  
+	<!-- Right Box with BMI Categories Explanation -->
+	<div class="right-box">
+	  <h1>BMI Categories</h1>
+	  <p>
+		<strong>Underweight:</strong> BMI is less than 18.5.<br>
+		<strong>Normal weight:</strong> BMI is between 18.5 and 24.9.<br>
+		<strong>Overweight:</strong> BMI is between 25 and 29.9.<br>
+		<strong>Obesity:</strong> BMI is 30 or greater.<br>
+		These categories are used to assess whether an individual may be at risk for health problems related to being underweight or overweight. It’s important to remember that BMI is a useful tool for general screening but does not account for all health factors, such as muscle mass or body composition.
+	  </p>
+	</div>
+  </div>
+  
+  <!-- Result Section (Bottom) -->
+  <div class="result">
+	<h2>Your BMI Result</h2>
+	<div id="bmi-result">
+	  <p>Your BMI will appear here after calculation.</p>
+	</div>
+  </div>
+
+  <!--resding section -->
+  <!-- Risks and Limitations Section -->
+<div class="risks-section">
+	<h2>Risks Associated with Being Overweight</h2>
+	<p>Being overweight increases the risk of a number of serious diseases and health conditions. Below is a list of said risks, according to the Centers for Disease Control and Prevention (CDC):</p>
+	<ul>
+	  <li>High blood pressure</li>
+	  <li>Higher levels of LDL cholesterol (bad cholesterol) and lower levels of HDL cholesterol (good cholesterol)</li>
+	  <li>Type II diabetes</li>
+	  <li>Coronary heart disease</li>
+	  <li>Stroke</li>
+	  <li>Gallbladder disease</li>
+	  <li>Osteoarthritis (joint disease due to cartilage breakdown)</li>
+	  <li>Sleep apnea and breathing problems</li>
+	  <li>Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver)</li>
+	  <li>Low quality of life</li>
+	  <li>Mental illnesses such as clinical depression and anxiety</li>
+	  <li>Body pains and difficulty with physical functions</li>
+	  <li>Increased risk of mortality</li>
+	</ul>
+	<p>Maintain a BMI below 25 kg/m². Consult your doctor for further advice on maintaining a healthy weight.</p>
+	<p>As can be seen from the list above, there are numerous negative, in some cases fatal, outcomes that may result from being overweight. 
+		Generally, a person should try to maintain a BMI below 25 kg/m2, but ideally should consult their doctor to determine whether or not 
+		they need to make any changes to their lifestyle in order to be healthier.</p>
+  
+	<h2>Risks Associated with Being Underweight</h2>
+	<p>Being underweight has its own associated risks, listed below:</p>
+	<ul>
+	  <li>Malnutrition, vitamin deficiencies, anemia (lowered ability to carry blood vessels)</li>
+	  <li>Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone</li>
+	  <li>A decrease in immune function</li>
+	  <li>Growth and development issues, particularly in children and teenagers</li>
+	  <li>Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. Underweight women also have a higher chance of miscarriage in the first trimester</li>
+	  <li>Potential complications as a result of surgery</li>
+	  <li>Generally, an increased risk of mortality compared to those with a healthy BMI</li>
+	</ul>
+	<p>In some cases, being underweight can be a sign of some underlying condition or disease such as anorexia nervosa, which has its own risks. Consult your doctor if you think you or someone you know is underweight, particularly if the reason for being underweight does not seem obvious.	</p>
+  
+	<h2>Limitations of BMI</h2>
+	<p>Although BMI is a widely used and useful indicator of healthy body weight, it does have its limitations. BMI is only an estimate that cannot take body composition into account. Due to a wide variety of body types as well as distribution of muscle, bone mass, and fat, BMI should be considered along with other measurements rather than being used as the sole method for determining a person's healthy body weight.</p>
+	<h3>In adults:</h3>
+	<p>BMI cannot be fully accurate because it is a measure of excess body weight, rather than excess body fat. BMI is further influenced by factors such as age, sex, ethnicity, muscle mass, body fat, and activity level, among others. For example, an older person who is considered a healthy weight, but is completely inactive in their daily life may have significant amounts of excess body fat even though they are not heavy. This would be considered unhealthy, while a younger person with higher muscle composition of the same BMI would be considered healthy. In athletes, particularly bodybuilders who would be considered overweight due to muscle being heavier than fat, it is entirely possible that they are actually at a healthy weight for their body composition. Generally, according to the CDC:</p>
+	<ul>
+	  <li>Older adults tend to have more body fat than younger adults with the same BMI.</li>
+	  <li>Women tend to have more body fat than men for an equivalent BMI.</li>
+	  <li>Muscular individuals and highly trained athletes may have higher BMIs due to large muscle mass.	</li>
+	</ul>
+	<h3>For Children and Adolescents:</h3>
+	<p>The same factors that limit the efficacy of BMI for adults can also apply to children and adolescents. Additionally, height and level of sexual maturation can influence BMI and body fat among children. BMI is a better indicator of excess body fat for obese children than it is for overweight children, whose BMI could be a result of increased levels of either fat or fat-free mass (all body components except for fat, which includes water, organs, muscle, etc.). In thin children, the difference in BMI can also be due to fat-free mass.</p>
+	<p>That being said, BMI is fairly indicative of body fat for 90-95% of the population, and can effectively be used along with other measures to help determine an individual's healthy body weight.</p>
+	<h2>BMI Prime</h2>
+	<p>BMI prime is the ratio of a person's measured BMI to the upper limit of BMI that is considered "normal," by institutions such as the WHO and the CDC.</p>
+	<p>The BMI prime formula is:</p>
+	<ul>
+		<li> BMI prime = BMI / 25 </li>
+	</ul>
+  </div>
+
+
+  	<!-- Site Socials and Address -->
+	<section id="site-socials" class="no-padding white-bg">
+		<div class="site-socials inner no-padding">
+			<!-- Socials -->
+			<div class="socials animated" data-animation="fadeInLeft" data-animation-delay="400">
+				
+				<!-- Instagram -->
+				<a href="#" class="social">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<!-- Linkedin -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<!-- Vimeo -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-vimeo-square"></i>
+				</a>
+				<!-- Youtube -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-youtube"></i>
+				</a>               
+				<!-- Google Plus -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-google-plus"></i>
+				</a>                
+			</div>
+			<!-- Adress, Mail -->
+			<div class="address socials animated" data-animation="fadeInRight" data-animation-delay="500">
+				<!-- Phone Number, Mail -->
+				<p>Phone: +1 (832) 588-4481 Email : <a href="mailto:kllmffe23@gmail.com" class="colored">kllmffe23@gmail.com</a> Address: 1200 post oak st, Houston, TX 77057</p>
+				<!-- Top Button -->
+				<a href="#home" class="scroll top-button">
+					<i class="fa fa-arrow-circle-up fa-2x"></i>
+				</a>
+			</div><!-- End Adress, Mail -->
+		</div><!-- End Inner -->
+	</section><!-- End Site Socials and Address -->
+  
+  
+	  
+	  <!-- Footer -->
+	  <footer id="footer" class="footer">
+		<img src="images/Totalfittracker.png" width="200" alt="Logo" />
+		<p class="copyright normal">© 2025 <span class="colored">TotalFitTracker.</span> All Rights Reserved.</p>
+	  </footer>
+	  
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.slabtext.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<script>
+       $("a.about-icon").hover(function () {
+       $(this).children("i").addClass("fa-spin");
+       }, function(){
+ 	   $(this).children("i").removeClass("fa-spin");
+       });
+
+	   <!--bmi js-->
+	   document.addEventListener('DOMContentLoaded', () => {
+  const unitRadios = document.querySelectorAll('input[name="unit"]');
+  const usUnitSection = document.getElementById('us-units');
+  const metricUnitSection = document.getElementById('metric-units');
+
+  // Function to toggle between US and Metric units
+  function toggleUnits() {
+    const selectedUnit = document.querySelector('input[name="unit"]:checked').value;
+
+    if (selectedUnit === 'us') {
+      usUnitSection.style.display = 'block';
+      metricUnitSection.style.display = 'none';
+    } else {
+      usUnitSection.style.display = 'none';
+      metricUnitSection.style.display = 'block';
+    }
+  }
+
+  // Add event listeners to the unit radio buttons
+  unitRadios.forEach((radio) => {
+    radio.addEventListener('change', toggleUnits);
+  });
+
+  // Initialize with the default unit
+  toggleUnits();
+});
+
+// BMI Calculation Logic
+document.getElementById('calculate-button').addEventListener('click', () => {
+  const selectedUnit = document.querySelector('input[name="unit"]:checked').value;
+  let heightInInches, weight, bmiResult;
+
+  console.log('Selected Unit:', selectedUnit);
+
+  if (selectedUnit === 'us') {
+    const feet = parseInt(document.getElementById('height-feet').value) || 0;
+    const inches = parseInt(document.getElementById('height-inches').value) || 0;
+    weight = parseFloat(document.getElementById('us-weight').value) || 0;
+
+    console.log('Feet:', feet);
+    console.log('Inches:', inches);
+    console.log('Weight (lbs):', weight);
+
+    // Convert height to inches
+    heightInInches = (feet * 12) + inches;
+    console.log('Height in inches:', heightInInches);
+
+    // BMI Calculation using the correct formula for USC units
+    const bmi = 703 * (weight / (heightInInches ** 2));
+    console.log('BMI:', bmi);
+
+    // Provide explanation based on BMI
+    if (bmi < 18.5) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are considered underweight. It's important to consult with a healthcare provider to assess your nutrition and overall health.</p>`;
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are within a healthy weight range! Keep maintaining a balanced diet and active lifestyle.</p>`;
+    } else if (bmi >= 25 && bmi <= 29.9) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are considered overweight. It may be a good idea to consider a healthier lifestyle with regular exercise and a balanced diet.</p>`;
+    } else {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You fall into the obesity range. It is highly recommended to consult with a healthcare provider for advice on weight management and to prevent potential health risks.</p>`;
+    }
+
+    document.getElementById('bmi-result').innerHTML = bmiResult;
+  } else {
+    heightInInches = parseFloat(document.getElementById('height-metric').value) / 100 || 0;
+    weight = parseFloat(document.getElementById('metric-weight').value) || 0;
+
+    console.log('Height in meters (metric):', heightInInches);
+    console.log('Weight (kg):', weight);
+
+    // BMI Calculation for metric units
+    const bmi = weight / (heightInInches ** 2);
+    console.log('BMI:', bmi);
+
+    // Provide explanation based on BMI
+    if (bmi < 18.5) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are considered underweight. It's important to consult with a healthcare provider to assess your nutrition and overall health.</p>`;
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are within a healthy weight range! Keep maintaining a balanced diet and active lifestyle.</p>`;
+    } else if (bmi >= 25 && bmi <= 29.9) {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You are considered overweight. It may be a good idea to consider a healthier lifestyle with regular exercise and a balanced diet.</p>`;
+    } else {
+      bmiResult = `<p>Your BMI is <strong>${bmi.toFixed(2)}</strong>. You fall into the obesity range. It is highly recommended to consult with a healthcare provider for advice on weight management and to prevent potential health risks.</p>`;
+    }
+
+    document.getElementById('bmi-result').innerHTML = bmiResult;
+  }
+
+  // Validate inputs and give a warning if necessary
+  if (heightInInches <= 0 || weight <= 0) {
+    document.getElementById('bmi-result').innerHTML = `<p>Please enter valid height and weight values.</p>`;
+  }
+});
+
+// Clear Form Logic
+document.getElementById('clear-button').addEventListener('click', () => {
+  // Clear all input fields
+  document.querySelectorAll('input[type="number"]').forEach(input => input.value = '');
+  
+  // Reset BMI result
+  document.getElementById('bmi-result').innerHTML = `<p>Your BMI will appear here after calculation.</p>`;
+
+  // Reset the radio buttons (optional, if you want to reset the units)
+  document.querySelector('input[name="unit"][value="us"]').checked = true;  // Default to US units
+  toggleUnits();  // Ensure the correct unit section is shown
+});
+
+
+
+
+ </script>
+ </body>
+ </html>
+
+
