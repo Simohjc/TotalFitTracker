@@ -645,15 +645,50 @@
        });
 
 
-	     // JavaScript for interactivity for contact form
-         document.getElementById('contact-us').addEventListener('submit', function(event) {
-         event.preventDefault(); // Prevent default form submission behavior
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 
-          // Display the mail message area
-          const messageArea = document.getElementById('mail-message');
-          messageArea.classList.remove('not-visible-message'); // Make it visible
-           messageArea.style.display = 'block'; // Ensure it's displayed
-          });
+const firebaseConfig = {
+  databaseURL: "https://totalfittracker-default-rtdb.firebaseio.com/"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const referenceInDb = ref(database, "receiving-emails");
+
+// JavaScript for interactivity for contact form
+document.getElementById('contact-us').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  // Get form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('mail').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // Push data to Firebase Realtime Database
+  push(referenceInDb, {
+    name: name,
+    email: email,
+    subject: subject,
+    message: message,
+    timestamp: new Date().toISOString() // Add a timestamp
+  })
+  .then(() => {
+    // Display the success message
+    const messageArea = document.getElementById('mail-message');
+    messageArea.classList.remove('not-visible-message'); // Make it visible
+    messageArea.style.display = 'block'; // Ensure it's displayed
+
+    // Optionally clear the form fields after successful submission
+    document.getElementById('contact-us').reset();
+  })
+  .catch((error) => {
+    console.error("Error adding document: ", error);
+    alert("There was an issue sending your message. Please try again later.");
+  });
+});
+
     </script>
 
 </body>
