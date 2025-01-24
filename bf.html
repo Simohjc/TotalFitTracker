@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="description" content="TotalFitTracker, website that helps people track daily calories, calculate macros, BMI, body fat, and more...">
+    <meta property="og:title" content="TotalFitTracker | Health, Wellness, Fitness & Nutrition">
+    <meta property="og:description" content="Track daily calories, calculate macros, BMI, body fat.">
+    <meta property="og:image" content="/social-image.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/TotalFitTracker.png" />
+	<title>Body Fat Calculator</title>
+	<!-- CSS Files -->
+		
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/player/YTPlayer.css" />
+	<link href="css/pro-bars.css" rel="stylesheet" />
+	
+
+	<!-- End CSS Files -->
+ 
+</head>
+<body>
+    <!-- Navigation -->
+	<section id="navigation" class="dark-nav">
+		<!-- Navigation Inner -->
+		<div class="nav-inner">
+			<!-- Site Logo -->
+			<div class="site-logo fancy">
+				<a href="#" id="logo-text" class="scroll logo">TotalFitTracker
+				</a>
+			</div><!-- End Site Logo -->
+			<a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+			<!-- Navigation Menu -->
+		    <div class="nav-menu">
+				<ul class="nav uppercase">
+					<li><a href="index.html" class="scroll">Home</a></li>       
+					<li><a href="index.html" class="scroll">About us</a></li>
+					<li><a href="index.html" class="scroll">Tools</a></li>     
+					<li><a href="index.html" class="scroll">Testimonial</a></li>
+					<li><a href="index.html" class="scroll">Contact</a></li>
+				</ul>
+		  </div><!-- End Navigation Menu -->
+		</div><!-- End Navigation Inner -->
+	</section><!-- End Navigation Section -->
+
+
+    <section id="home" class="relative"> 	
+		<div id="slides">
+			<div class="slides-container relative">
+				<!-- Slider Images -->
+				<div class="image2"></div>
+                <div class="image1"></div>
+				<div class="image3"></div>
+                <div class="image4"></div>
+				 <!-- End Slider Images -->	 
+			</div>
+			<!-- Slider Controls -->
+			<nav class="slides-navigation">
+			  <a href="#" class="next"></a>
+			  <a href="#" class="prev"></a>
+			</nav>
+		</div><!-- End Home Slides -->
+		<div class="v2 absolute">
+			<!-- Auto Typocraphic Texts -->
+			<div class="typographic">
+            	<!-- Your Logo -->
+				<div class="logo">
+					<!--<img src="images/Totalfittracker.png" width="100" alt="Logo" />-->
+				</div>
+				<h2 class=" condensed uppercase no-padding no-margin bold gray1">Track. Calculate. Transform.</h2>
+				<h2 class=" condensed uppercase no-padding no-margin bold colored">With TotalFitTracker. Start your journey today.</h2>
+				<a href="#about" class="scroll"><i class="arrow-down fa fa-3x fa-angle-double-down"></i></a>
+			</div><!--End Auto Typocraphic Texts -->
+		</div><!-- End V2 area -->
+	</section><!-- End Home Section -->
+
+
+
+
+     <!-- Main Container (Flex layout for left, center, right) -->
+<div class="main-container">
+    <!-- Left Box with Body Fat Introduction -->
+    <div class="left-box">
+      <h1>Body Fat Introduction</h1>
+      <p>
+        Body fat percentage is the proportion of fat your body contains in relation to your total body weight. It is an important metric for understanding your overall health and fitness level. Unlike BMI, which only considers weight and height, body fat percentage takes into account body composition, which provides a more accurate measure of fitness. Tracking body fat can help assess progress in fitness goals, manage health risks, and optimize athletic performance. Use the calculator to determine your body fat percentage based on key measurements.
+      </p>
+    </div>
+  
+    <!-- Body Fat Calculator Section (Centered) -->
+    <div class="bmi-container">
+      <h1>Body Fat Calculator</h1>
+      <p>
+        Body fat percentage is a simple calculation using measurements of your body. It helps assess the amount of fat you have compared to lean tissue.
+      </p>
+  
+      <!-- Input Section -->
+      <div class="input-section">
+        <h2>Enter Your Information</h2>
+  
+        <!-- Unit Selection -->
+        <div class="unit-selection">
+          <label>
+            <input type="radio" name="unit" value="us" checked> US Units
+          </label>
+          <label>
+            <input type="radio" name="unit" value="metric"> Metric Units
+          </label>
+        </div>
+  
+        <!-- US Units Form -->
+        <div id="us-units" class="unit-form">
+          <!-- Gender -->
+          <label for="us-gender">Gender:</label>
+          <select id="us-gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+  
+          <!-- Age -->
+          <label for="us-age">Age:</label>
+          <input type="number" id="us-age" name="us-age" placeholder="Enter your age" required>
+
+                   <!-- Height (Feet and Inches) -->
+          <label for="us-feet">Height (Feet):</label>
+          <input type="number" id="us-feet" name="us-feet" placeholder="Enter height in feet" required>
+        
+          <label for="us-inches">Height (Inches):</label>
+          <input type="number" id="us-inches" name="us-inches" placeholder="Enter height in inches" required>
+  
+          <!-- Measurements -->
+          <label for="waist">Waist Circumference (in):</label>
+          <input type="number" id="waist" name="waist" placeholder="Enter your waist circumference" required>
+  
+          <label for="neck">Neck Circumference (in):</label>
+          <input type="number" id="neck" name="neck" placeholder="Enter your neck circumference" required>
+  
+          <!-- Additional field for females -->
+          <div id="female-fields" style="display: none;">
+            <label for="hip">Hip Circumference (in):</label>
+            <input type="number" id="hip" name="hip" placeholder="Enter your hip circumference" required>
+          </div>
+  
+          <!-- Weight -->
+          <label for="us-weight">Weight (lbs):</label>
+          <input type="number" id="us-weight" name="us-weight" placeholder="Enter weight in pounds" required>
+        </div>
+  
+        <!-- Metric Units Form -->
+        <div id="metric-units" class="unit-form" style="display: none;">
+          <!-- Gender -->
+          <label for="metric-gender">Gender:</label>
+          <select id="metric-gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+  
+          <!-- Age -->
+          <label for="metric-age">Age:</label>
+          <input type="number" id="metric-age" name="metric-age" placeholder="Enter your age" required>
+
+              <!-- Height (cm) -->
+        <label for="height-metric">Height (cm):</label>
+        <input type="number" id="height-metric" name="height-metric" placeholder="Enter your height in centimeters" required>
+  
+          <!-- Measurements -->
+          <label for="waist-metric">Waist Circumference (cm):</label>
+          <input type="number" id="waist-metric" name="waist-metric" placeholder="Enter your waist circumference" required>
+  
+          <label for="neck-metric">Neck Circumference (cm):</label>
+          <input type="number" id="neck-metric" name="neck-metric" placeholder="Enter your neck circumference" required>
+  
+          <!-- Additional field for females -->
+          <div id="female-fields-metric" style="display: none;">
+            <label for="hip-metric">Hip Circumference (cm):</label>
+            <input type="number" id="hip-metric" name="hip-metric" placeholder="Enter your hip circumference" required>
+          </div>
+  
+          <!-- Weight -->
+          <label for="metric-weight">Weight (kg):</label>
+          <input type="number" id="metric-weight" name="metric-weight" placeholder="Enter weight in kilograms" required>
+        </div>
+  
+        <!-- Buttons -->
+        <div class="button-group">
+          <button id="calculate-button">Calculate Body Fat</button>
+          <button id="clear-button" type="button">Clear</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Right Box with Body Fat Categories Explanation -->
+    <div class="right-box">
+      <h1>Body Fat Categories</h1>
+      <p>
+        <strong>Essential Fat:</strong> 10-13% (women), 2-5% (men)<br>
+        <strong>Athletes:</strong> 14-20% (women), 6-13% (men)<br>
+        <strong>Fitness:</strong> 21-24% (women), 14-17% (men)<br>
+        <strong>Average:</strong> 25-31% (women), 18-24% (men)<br>
+        <strong>Obese:</strong> 32%+ (women), 25%+ (men)<br>
+        Knowing your body fat percentage can help you manage your health and fitness goals more effectively.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Result Section (Bottom) -->
+  <div class="result">
+    <h2>Your Body Fat Result</h2>
+    <div id="body-fat-result">
+      <p>Your body fat percentage will appear here after calculation.</p>
+    </div>
+  </div>
+
+  <!-- reading section -->
+
+  <div class="risks-section">
+	<h2>Reference</h2>
+	<h3>The American Council on Exercise Body Fat Categorization: </h3>
+	<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: left;" class="fat-percentage-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Women</th>
+            <th>Men</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Essential fat</td>
+            <td>10-13%</td>
+            <td>2-5%</td>
+          </tr>
+          <tr>
+            <td>Athletes</td>
+            <td>14-20%</td>
+            <td>6-13%</td>
+          </tr>
+          <tr>
+            <td>Fitness</td>
+            <td>21-24%</td>
+            <td>14-17%</td>
+          </tr>
+          <tr>
+            <td>Average</td>
+            <td>25-31%</td>
+            <td>18-24%</td>
+          </tr>
+          <tr>
+            <td>Obese</td>
+            <td>32+%</td>
+            <td>25+%</td>
+          </tr>
+        </tbody>
+      </table>
+      
+
+  
+	<h3>Jackson & Pollock Ideal Body Fat Percentages:</h3>
+   
+<table class="body-fat-table">
+  <thead>
+    <tr>
+      <th>Age</th>
+      <th>Women</th>
+      <th>Men</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20</td>
+      <td>17.7%</td>
+      <td>8.5%</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>18.4%</td>
+      <td>10.5%</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>19.3%</td>
+      <td>12.7%</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>21.5%</td>
+      <td>13.7%</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>22.2%</td>
+      <td>15.3%</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>22.9%</td>
+      <td>16.4%</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>25.2%</td>
+      <td>18.9%</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>26.3%</td>
+      <td>20.9%</td>
+    </tr>
+  </tbody>
+</table>
+
+	
+
+  
+	<h2>Body Fat, Overweight, and Obesity</h2>
+     <p>The scientific term for body fat is "adipose tissue." Adipose tissue serves a number of important functions. Its primary purpose is to store lipids from which the body creates energy. In addition, it secretes a number of important hormones, and provides the body with some cushioning as well as insulation.<br />
+        Body fat includes essential body fat and storage body fat. Essential body fat is a base level of fat that is found in most parts of the body. It is necessary fat that maintains life and reproductive functions. The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women. The healthy range of body fat for men is typically defined as 8-19%, while the healthy range for women is 21-33%. While having excess body fat can have many detrimental effects on a person's health, insufficient body fat can have negative health effects of its own, and maintaining a body fat percentage below, or even at the essential body fat percentage range is a topic that should be discussed with a medical professional.<br />
+        Storage fat is fat that accumulates in adipose tissue, be it subcutaneous fat (deep under the dermis and wrapped around vital organs) or visceral fat (fat located inside the abdominal cavity, between organs), and references to body fat typically refer to this type of fat. While some storage fat is ideal, excess amounts of storage fat can have serious negative health implications.<br />
+        Excess body fat leads to the condition of being overweight and eventually to obesity given that insufficient measures are taken to curb increasing body fat. Note that being overweight does not necessarily indicate an excess of body fat. A person's body weight is comprised of multiple factors including (but not limited to) body fat, muscle, bone density, and water content. Thus, highly muscular people are often classified as overweight.<br />
+        The rate at which body fat accumulates is different from person to person and is dependent on many factors including genetic factors as well as behavioral factors such as lack of exercise and excessive food intake. Due to varying factors, it can be more difficult for certain people to reduce body fat stored in the abdominal region. However, managing diet and exercise has been shown to reduce stored fat. Note that both women and men store body fat differently and that this can change over time. After the age of 40 (or after menopause in some cases for women), reduced sexual hormones can lead to excess body fat around the stomach in men, or around the buttocks and thighs of women.</p>	
+    <h2>Potential Complications of Excess Body Fat</h2>
+	<p>The World Health Organization (WHO) classifies obesity as one of the leading preventable causes of death worldwide that is estimated to claim 111,909 to 365,000 deaths per year in the U.S. This has been a growing cause for concern because 36.5% of U.S. adults are defined as obese according to the Centers for Disease Control and Prevention.<br />
+        Obesity is associated with a reduction in quality of life, poorer mental health outcomes, obstructive sleep apnea, as well as multiple leading causes of death worldwide such as cardiovascular disease, stroke, certain cancers and diabetes. All of these potential complications have the ability to reduce a person's life expectancy, and as such, obesity is a medical condition that is studied by many researchers.<br />
+        As previously mentioned, fat produces a number of essential hormones that affect a person's body. An excess or a lack of critical hormones can have negative effects that preclude proper body function. On a related note, studies have found that excess body fat, particularly abdominal fat, disrupts the normal balance and function of some of these hormones. Furthermore, body fat, specifically visceral fat, has a role in the release of specific cytokines, which are a broad category of proteins involved in cell signaling, that can potentially increase the risk of cardiovascular disease. Visceral fat is also directly associated with higher levels of low-density lipoprotein (LDL) cholesterol, lower high-density lipoprotein (HDL) cholesterol, and insulin resistance. LDL cholesterol is commonly referred to as "bad cholesterol" while HDL is referred to as "good cholesterol." High levels of LDL cholesterol can clog arteries and lead to complications including heart attacks. Insulin resistance involves cells not properly responding to the hormone insulin, which can lead to high blood sugar levels, and eventually to type 2 diabetes. As can be seen, excess visceral fat can have measurable negative impacts to a person's health.</p>
+	
+  </div>
+
+
+
+  	<!-- Site Socials and Address -->
+	<section id="site-socials" class="no-padding white-bg">
+		<div class="site-socials inner no-padding">
+			<!-- Socials -->
+			<div class="socials animated" data-animation="fadeInLeft" data-animation-delay="400">
+				
+				<!-- Instagram -->
+				<a href="#" class="social">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<!-- Linkedin -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<!-- Vimeo -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-vimeo-square"></i>
+				</a>
+				<!-- Youtube -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-youtube"></i>
+				</a>               
+				<!-- Google Plus -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-google-plus"></i>
+				</a>                
+			</div>
+			<!-- Adress, Mail -->
+			<div class="address socials animated" data-animation="fadeInRight" data-animation-delay="500">
+				<!-- Phone Number, Mail -->
+				<p>Phone: +1 (832) 588-4481 Email : <a href="mailto:kllmffe23@gmail.com" class="colored">kllmffe23@gmail.com</a> Address: 1200 post oak st, Houston, TX 77057</p>
+				<!-- Top Button -->
+				<a href="#home" class="scroll top-button">
+					<i class="fa fa-arrow-circle-up fa-2x"></i>
+				</a>
+			</div><!-- End Adress, Mail -->
+		</div><!-- End Inner -->
+	</section><!-- End Site Socials and Address -->
+  
+
+
+	
+
+  
+  
+	  
+	  <!-- Footer -->
+	  <footer id="footer" class="footer">
+		<img src="images/Totalfittracker.png" width="200" alt="Logo" />
+		<p class="copyright normal">© 2025 <span class="colored">TotalFitTracker.</span> All Rights Reserved.</p>
+	  </footer>
+	  
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.slabtext.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<script>
+       $("a.about-icon").hover(function () {
+       $(this).children("i").addClass("fa-spin");
+       }, function(){
+ 	   $(this).children("i").removeClass("fa-spin");
+       });
+
+
+
+	 /*bodyfatcalculator javascript*/
+ // Wait for the DOM to load
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+  // Element references
+  const calculateButton = document.getElementById('calculate-button');
+  const clearButton = document.getElementById('clear-button');
+  const unitRadios = document.querySelectorAll('input[name="unit"]');
+  const usUnitsForm = document.getElementById('us-units');
+  const metricUnitsForm = document.getElementById('metric-units');
+  const resultDiv = document.getElementById('body-fat-result');
+  const femaleFields = document.getElementById('female-fields');
+  const femaleFieldsMetric = document.getElementById('female-fields-metric');
+
+  // Toggle between US and Metric Units
+  unitRadios.forEach((radio) => {
+    radio.addEventListener('change', function () {
+      if (radio.value === 'us') {
+        usUnitsForm.style.display = 'block';
+        metricUnitsForm.style.display = 'none';
+      } else {
+        usUnitsForm.style.display = 'none';
+        metricUnitsForm.style.display = 'block';
+      }
+    });
+  });
+
+  // Toggle visibility of hip input for females
+  document.getElementById('us-gender').addEventListener('change', function () {
+    femaleFields.style.display = this.value === 'female' ? 'block' : 'none';
+  });
+
+  document.getElementById('metric-gender').addEventListener('change', function () {
+    femaleFieldsMetric.style.display = this.value === 'female' ? 'block' : 'none';
+  });
+
+  // Clear all inputs and result
+  clearButton.addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input) => (input.value = ''));
+    resultDiv.innerHTML = '<p>Your body fat percentage will appear here after calculation.</p>';
+  });
+
+  // Calculate Body Fat Percentage
+  calculateButton.addEventListener('click', function () {
+    const selectedUnit = document.querySelector('input[name="unit"]:checked').value;
+    const isUS = selectedUnit === 'us';
+
+    let gender, age, waist, neck, height, hip, bodyFat;
+
+    if (isUS) {
+      // Get inputs for US units
+      gender = document.getElementById('us-gender').value;
+      age = parseFloat(document.getElementById('us-age').value);
+      waist = parseFloat(document.getElementById('waist').value);
+      neck = parseFloat(document.getElementById('neck').value);
+      height =
+        parseFloat(document.getElementById('us-feet').value) * 12 +
+        parseFloat(document.getElementById('us-inches').value); // Corrected ID from height-feet to us-feet
+      hip = gender === 'female' ? parseFloat(document.getElementById('hip').value) : 0;
+    } else {
+      // Get inputs for Metric units
+      gender = document.getElementById('metric-gender').value;
+      age = parseFloat(document.getElementById('metric-age').value);
+      waist = parseFloat(document.getElementById('waist-metric').value);
+      neck = parseFloat(document.getElementById('neck-metric').value);
+      height = parseFloat(document.getElementById('height-metric').value);
+      hip = gender === 'female' ? parseFloat(document.getElementById('hip-metric').value) : 0;
+    }
+
+    // Validate inputs
+    if (isNaN(age) || isNaN(waist) || isNaN(neck) || isNaN(height) || (gender === 'female' && isNaN(hip))) {
+      resultDiv.innerHTML = '<p style="color: red;">Please fill in all required fields correctly.</p>';
+      return;
+    }
+
+    // Body fat calculation formulas
+    if (gender === 'male') {
+      bodyFat = isUS
+        ? 86.010 * Math.log10(waist - neck) - 70.041 * Math.log10(height) + 36.76
+        : 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450;
+    } else {
+      bodyFat = isUS
+        ? 163.205 * Math.log10(waist + hip - neck) - 97.684 * Math.log10(height) - 78.387
+        : 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(height)) - 450;
+    }
+
+    // Display the result
+    resultDiv.style.display = "block"; // Ensure the result section is visible
+    resultDiv.innerHTML = `<p>Your body fat percentage is <strong>${bodyFat.toFixed(2)}%</strong>.</p>`;
+  });
+});
+
+
+
+
+
+
+
+
+
+
+ </script>
+ </body>
+ </html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="description" content="TotalFitTracker, website that helps people track daily calories, calculate macros, BMI, body fat, and more...">
+    <meta property="og:title" content="TotalFitTracker | Health, Wellness, Fitness & Nutrition">
+    <meta property="og:description" content="Track daily calories, calculate macros, BMI, body fat.">
+    <meta property="og:image" content="/social-image.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="images/TotalFitTracker.png" />
+	<title>Macro Calculator</title>
+	<!-- CSS Files -->
+		
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="css/player/YTPlayer.css" />
+	<link href="css/pro-bars.css" rel="stylesheet" />
+	
+
+	<!-- End CSS Files -->
+ 
+</head>
+<body>
+    <!-- Navigation -->
+	<section id="navigation" class="dark-nav">
+		<!-- Navigation Inner -->
+		<div class="nav-inner">
+			<!-- Site Logo -->
+			<div class="site-logo fancy">
+				<a href="#" id="logo-text" class="scroll logo">TotalFitTracker
+				</a>
+			</div><!-- End Site Logo -->
+			<a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+			<!-- Navigation Menu -->
+		    <div class="nav-menu">
+				<ul class="nav uppercase">
+					<li><a href="index.html" class="scroll">Home</a></li>       
+					<li><a href="index.html" class="scroll">About us</a></li>
+					<li><a href="index.html" class="scroll">Tools</a></li>     
+					<li><a href="index.html" class="scroll">Testimonial</a></li>
+					<li><a href="index.html" class="scroll">Contact</a></li>
+				</ul>
+		  </div><!-- End Navigation Menu -->
+		</div><!-- End Navigation Inner -->
+	</section><!-- End Navigation Section -->
+
+
+    <section id="home" class="relative"> 	
+		<div id="slides">
+			<div class="slides-container relative">
+				<!-- Slider Images -->
+				<div class="image2"></div>
+                <div class="image1"></div>
+				<div class="image3"></div>
+                <div class="image4"></div>
+				 <!-- End Slider Images -->	 
+			</div>
+			<!-- Slider Controls -->
+			<nav class="slides-navigation">
+			  <a href="#" class="next"></a>
+			  <a href="#" class="prev"></a>
+			</nav>
+		</div><!-- End Home Slides -->
+		<div class="v2 absolute">
+			<!-- Auto Typocraphic Texts -->
+			<div class="typographic">
+            	<!-- Your Logo -->
+				<div class="logo">
+					<!--<img src="images/Totalfittracker.png" width="100" alt="Logo" />-->
+				</div>
+				<h2 class=" condensed uppercase no-padding no-margin bold gray1">Track. Calculate. Transform.</h2>
+				<h2 class=" condensed uppercase no-padding no-margin bold colored">With TotalFitTracker. Start your journey today.</h2>
+				<a href="#about" class="scroll"><i class="arrow-down fa fa-3x fa-angle-double-down"></i></a>
+			</div><!--End Auto Typocraphic Texts -->
+		</div><!-- End V2 area -->
+	</section><!-- End Home Section -->
+
+
+<div class="main-container">
+    <div class="left-box">
+        <h1>Macro Introduction</h1>
+        <p>
+            In the context of health and fitness, macronutrients are most often defined to be the chemical compounds that humans consume in large quantities that provide bulk energy. Specifically, they refer to carbohydrates, proteins, and fats. Some definitions also include water, air, calcium, sodium, chloride ions, and some other substances, along with more typical macronutrients, since they are needed in large quantities by the human body. In this calculator, we only calculate daily carbohydrate, protein, and fat needs.<br />
+            Micronutrients are another essential part of human nutrition and consist of vitamins and dietary minerals such as Vitamin A, copper, iron, and iodine. While macronutrients are necessary daily in amounts on the order of grams, humans typically only need fewer than 100 milligrams of micronutrients each day.
+        </p>
+      </div>
+
+     <!-- Macro Calculator Section (Centered) -->
+    <div class="macro-container">
+    <h1>Macro Calculator</h1>
+    <p>
+      Calculate your daily macronutrient requirements to align with your fitness and health goals.
+    </p>
+  
+    <!-- Input Section -->
+    <div class="input-section">
+      <h2>Enter Your Information</h2>
+  
+      <!-- Unit Selection -->
+      <div class="unit-selection">
+        <label>
+          <input type="radio" name="unit" value="us" checked> US Units
+        </label>
+        <label>
+          <input type="radio" name="unit" value="metric"> Metric Units
+        </label>
+      </div>
+  
+      <!-- US Units Form -->
+      <div id="us-units" class="unit-form">
+        <label for="us-age">Age:</label>
+        <input type="number" id="us-age" name="us-age" placeholder="Enter your age" required>
+  
+        <label for="us-gender">Gender:</label>
+        <select id="us-gender" name="us-gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+  
+        <label for="us-height-feet">Height (Feet):</label>
+        <input type="number" id="us-height-feet" name="us-height-feet" placeholder="Feet" required>
+  
+        <label for="us-height-inches">Height (Inches):</label>
+        <input type="number" id="us-height-inches" name="us-height-inches" placeholder="Inches" required>
+  
+        <label for="us-weight">Weight (lbs):</label>
+        <input type="number" id="us-weight" name="us-weight" placeholder="Enter weight in pounds" required>
+  
+        <label for="us-activity">Activity Level:</label>
+        <select id="us-activity" name="us-activity">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Lightly Active</option>
+          <option value="1.55">Moderately Active</option>
+          <option value="1.725">Very Active</option>
+          <option value="1.9">Extra Active</option>
+        </select>
+  
+        <label for="us-goal">Goal:</label>
+        <select id="us-goal" name="us-goal">
+          <option value="deficit">Lose Weight</option>
+          <option value="maintain">Maintain Weight</option>
+          <option value="surplus">Gain Weight</option>
+        </select>
+      </div>
+  
+      <!-- Metric Units Form -->
+      <div id="metric-units" class="unit-form" style="display: none;">
+        <label for="metric-age">Age:</label>
+        <input type="number" id="metric-age" name="metric-age" placeholder="Enter your age" required>
+  
+        <label for="metric-gender">Gender:</label>
+        <select id="metric-gender" name="metric-gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+  
+        <label for="metric-height">Height (cm):</label>
+        <input type="number" id="metric-height" name="metric-height" placeholder="Enter height in cm" required>
+  
+        <label for="metric-weight">Weight (kg):</label>
+        <input type="number" id="metric-weight" name="metric-weight" placeholder="Enter weight in kg" required>
+  
+        <label for="metric-activity">Activity Level:</label>
+        <select id="metric-activity" name="metric-activity">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Lightly Active</option>
+          <option value="1.55">Moderately Active</option>
+          <option value="1.725">Very Active</option>
+          <option value="1.9">Extra Active</option>
+        </select>
+  
+        <label for="metric-goal">Goal:</label>
+        <select id="metric-goal" name="metric-goal">
+          <option value="deficit">Lose Weight</option>
+          <option value="maintain">Maintain Weight</option>
+          <option value="surplus">Gain Weight</option>
+        </select>
+      </div>
+  
+      <!-- Buttons -->
+      <div class="button-group">
+        <button id="calculate-button" type="button">Calculate Macros</button>
+        <button id="clear-button" type="button">Clear</button>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="right-box">
+        <h1>Protein</h1>
+        <p>
+            Proteins are organic compounds comprised of amino acids, and are one of the types of macronutrients. Amino acids are essential to a person's well-being, and there are certain amino acids that can only be obtained through diet. These amino acids are typically referred to as "essential amino acids," and are obtained by humans and other animals through the consumption of protein.
+        </p>
+        <h2>Carbohydrates (Carbs)</h2>
+        <p>
+            Carbohydrates, often referred to as simply "carbs," are compounds that are typically classified as sugar, starch, or fiber. Sugar is the simplest form of carbohydrate, while starch and fiber are complex carbohydrates. Carbohydrates are often also classified based on the number of saccharides that comprise them: monosaccharides, disaccharides, oligosaccharides, and polysaccharides. Monosaccharides and disaccharides are often referred to as "simple carbohydrates," while oligosaccharides and polysaccharides are referred to as "complex carbohydrates."
+        </p>
+        <h2>Fat</h2>
+        <p>
+            Fats are molecules that are comprised primarily of carbon and hydrogen atoms. Common examples include cholesterol, phospholipids, and triglycerides. Although fats, in the context of nutrition, are typically viewed as unhealthy, they have both structural as well as metabolic functions, and are a necessary part of the human diet. They are also highly energy dense and are the most efficient form of energy storage.
+        </p>
+      </div>
+</div>
+
+  
+  <!-- Results Section -->
+  <div class="result">
+    <h2>Your Macro Results</h2>
+    <div id="macro-result">
+      <p>Calories: <span id="calories">-</span></p>
+      <p>Proteins: <span id="proteins">-</span> g</p>
+      <p>Fats: <span id="fats">-</span> g</p>
+      <p>Carbs: <span id="carbs">-</span> g</p>
+    </div>
+  </div>
+  
+
+
+    
+
+  <!-- reading section -->
+
+  <div class="risks-section">
+	<h2>Daily Calorie Needs</h2>
+	<p>
+        The number of calories a person needs to consume on a daily basis is mainly based on a number of factors including height, weight, age, and activity level, along with whether the person wants to maintain, lose, or gain weight. The values returned by the calculator are based on two equations for estimating the basal metabolic rate (BMR) or resting daily energy expenditure (RDEE) of a person. Once the BMR or RDEE is calculated, they are then multiplied by an activity factor to estimate daily caloric needs. The Mifflin-St Jeor Equation is a widely adopted equation that calculates BMR mainly based on physical characteristics such as body weight and height. The Katch-McArdle Formula calculates RDEE, which takes lean body mass into account. The Katch-McArdle Formula can be more accurate for people who are leaner and know their body fat percentage.<br />
+        Based on the above factors, an average person may need to consume anywhere from 1600-3000 calories a day. The recommendations are generally higher for men (2000-3000) than women (1600-2400), and an increased activity level requires more calories, while a sedentary person would require less.<br />
+        As carbohydrates, proteins, and fats provide nearly the entire energy needs of the human body, their daily needs can be calculated based on the daily caloric need. The values returned by the calculator are an estimate based on standards and guidelines provided by a number of institutions, such as the American Dietetic Association, Centers for Disease Control and Prevention, World Health Organization, and more.
+     </p>
+	
+      
+
+  
+	<h3>Macronutrients in Common Foods</h3>
+   
+<table class="body-fat-table">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Serving Size</th>
+      <th>Protein</th>
+      <th>Carbs</th>
+      <th>Fat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="5"><b>Fruit</b></td></tr>
+    <tr>
+      <td>Apple</td>
+      <td>	1 (4 oz.)</td>
+      <td>0.27g</td>
+      <td>	14.36g</td>
+      <td>0.18g</td>
+    </tr>
+    <tr>
+        <td>Banana</td>
+        <td>1 (6 oz.)</td>
+        <td>1.85g</td>
+        <td>38.85g</td>
+        <td>0.56g</td>
+    </tr>
+    <tr>
+        <td>Grapes</td>
+        <td>1 cup</td>
+        <td>1.15g</td>
+        <td>28.96g</td>
+        <td>0.26g</td>
+    </tr>
+    <tr>
+        <td>Orange</td>
+        <td>1 (4 oz.)</td>
+        <td>0.79g</td>
+        <td>11.79g</td>
+        <td>0.23g</td>
+    </tr>
+    <tr>
+        <td>Pear</td>
+        <td>1 (5 oz.)</td>
+        <td>0.54g</td>
+        <td>21.91g</td>
+        <td>0.17g</td>
+    </tr>
+    <tr>
+        <td>Peach</td>
+       <td>1 (6 oz.)</td>
+       <td>1.2g</td>
+        <td>12.59g</td>
+       <td>0.33g</td>
+    </tr>
+    <tr>
+        <td>Pineapple</td>
+        <td>1 cup</td>
+        <td>0.84g</td>
+        <td>19.58g</td>
+        <td>0.19g</td>
+    </tr>
+    <tr>
+        <td>Strawberry</td>
+        <td>1 cup</td>
+        <td>1.11g</td>
+        <td>12.75g</td>
+        <td>0.5g</td>
+    </tr>
+    <tr>
+        <td>Watermelon</td>
+        <td>1 cup</td>
+        <td>0.93g</td>
+        <td>11.48g</td>
+        <td>0.23g</td>
+    </tr>
+    <tr><td colspan="5"><b>Vegetables</b></td></tr>
+    <tr>
+        <td>Asparagus</td>
+        <td>1 cup</td>
+        <td>2.95g</td>
+        <td>5.2g</td>
+        <td>0.16g</td>
+    </tr>
+    <tr>
+        <td>Broccoli</td>
+  <td>1 cup</td>
+  <td>2.57g</td>
+  <td>6.04g</td>
+  <td>0.34g</td>
+    </tr>
+    <tr>
+        <td>Carrots</td>
+        <td>1 cup</td>
+        <td>1.19g</td>
+        <td>12.26g</td>
+        <td>0.31g</td>
+    </tr>
+    <tr>
+        <td>Cucumber</td>
+        <td>4 oz.</td>
+        <td>0.67g</td>
+        <td>2.45g</td>
+        <td>0.18g</td>
+    </tr>
+    <tr>
+        <td>Eggplant</td>
+        <td>1 cup</td>
+        <td>0.98g</td>
+        <td>5.88g</td>
+        <td>0.18g</td>
+    </tr>
+    <tr>
+        <td>Lettuce</td>
+        <td>1 cup</td>
+        <td>0.5g</td>
+        <td>1.63g</td>
+        <td>0.08g</td>
+    </tr>
+    <tr>
+        <td>Tomato</td>
+        <td>1 cup</td>
+       <td>1.58g</td>
+       <td>7.06g</td>
+       <td>0.36g</td>
+    </tr>
+    <tr><td colspan="5"><b>Protein</b></td></tr>
+    <tr>
+        <td>Beef, regular, cooked</td>
+        <td>2 oz.</td>
+        <td>14.2g</td>
+        <td>0g</td>
+        <td>10.4g</td>
+      </tr>
+      <tr>
+        <td>Chicken, cooked</td>
+        <td>2 oz.</td>
+        <td>16g</td>
+        <td>0g</td>
+        <td>1.84g</td>
+      </tr>
+      <tr>
+        <td>Tofu</td>
+        <td>4 oz.</td>
+        <td>7.82g</td>
+        <td>2.72g</td>
+        <td>3.06g</td>
+      </tr>
+      <tr>
+        <td>Egg</td>
+        <td>1 large</td>
+        <td>6.29g</td>
+        <td>0.38g</td>
+        <td>4.97g</td>
+      </tr>
+      <tr>
+        <td>Fish, Catfish, cooked</td>
+        <td>2 oz.</td>
+        <td>9.96g</td>
+        <td>4.84g</td>
+        <td>8.24g</td>
+      </tr>
+      <tr>
+        <td>Pork, cooked</td>
+        <td>2 oz.</td>
+        <td>15.82g</td>
+        <td>0g</td>
+        <td>8.26g</td>
+      </tr>
+      <tr>
+        <td>Shrimp, cooked</td>
+        <td>2 oz.</td>
+        <td>15.45g</td>
+        <td>0.69g</td>
+        <td>1.32g</td>
+      </tr> 
+      <tr><td colspan="5"><b>Common Meals/Snacks</b></td></tr>    
+      <tr>
+        <td>Bread, white</td>
+        <td>1 slice (1 oz.)</td>
+        <td>1.91g</td>
+        <td>12.65g</td>
+        <td>0.82g</td>
+      </tr>
+      <tr>
+        <td>Butter</td>
+        <td>1 tablespoon</td>
+        <td>0.12g</td>
+        <td>0.01g</td>
+        <td>11.52g</td>
+      </tr>
+      <tr>
+        <td>Caesar salad</td>
+        <td>3 cups</td>
+        <td>16.3g</td>
+        <td>21.12g</td>
+        <td>45.91g</td>
+      </tr>
+      <tr>
+        <td>Cheeseburger</td>
+        <td>1 sandwich</td>
+        <td>14.77g</td>
+        <td>31.75g</td>
+        <td>15.15g</td>
+      </tr>
+      <tr>
+        <td>Hamburger</td>
+        <td>1 sandwich</td>
+        <td>14.61g</td>
+        <td>26.81g</td>
+        <td>10.97g</td>
+      </tr>
+      <tr>
+        <td>Dark Chocolate</td>
+        <td>1 oz.</td>
+        <td>1.57g</td>
+        <td>16.84g</td>
+        <td>9.19g</td>
+      </tr>
+      <tr>
+        <td>Corn</td>
+        <td>1 cup</td>
+        <td>4.3g</td>
+        <td>30.49g</td>
+        <td>1.64g</td>
+      </tr>
+      <tr>
+        <td>Pizza</td>
+        <td>1 slice (14")</td>
+        <td>13.32g</td>
+        <td>33.98g</td>
+        <td>12.13g</td>
+      </tr>
+      <tr>
+        <td>Potato</td>
+        <td>6 oz.</td>
+        <td>4.47g</td>
+        <td>36.47g</td>
+        <td>0.22g</td>
+      </tr>
+      <tr>
+        <td>Rice</td>
+        <td>1 cup cooked</td>
+        <td>4.2g</td>
+        <td>44.08g</td>
+        <td>0.44g</td>
+      </tr>
+      <tr>
+        <td>Sandwich</td>
+        <td>1 (6" Subway Turkey Sandwich)</td>
+        <td>18g</td>
+        <td>46g</td>
+        <td>3.5g</td>
+      </tr>
+      <tr><td colspan="5"><b>Beverages/Dairy</b></td></tr>   
+      <tr>
+        <td>Beer</td>
+        <td>1 can</td>
+        <td>1.64g</td>
+        <td>12.64g</td>
+        <td>0g</td>
+      </tr>
+      <tr>
+        <td>Coca-Cola Classic</td>
+        <td>1 can</td>
+        <td>0g</td>
+        <td>39g</td>
+        <td>0g</td>
+      </tr>
+      <tr>
+        <td>Diet Coke</td>
+        <td>1 can</td>
+        <td>0g</td>
+        <td>0g</td>
+        <td>0g</td>
+      </tr>
+      <tr>
+        <td>Milk (1%)</td>
+        <td>1 cup</td>
+        <td>8.22g</td>
+        <td>12.18g</td>
+        <td>2.37g</td>
+      </tr>
+      <tr>
+        <td>Milk (2%)</td>
+        <td>1 cup</td>
+        <td>8.05g</td>
+        <td>11.42g</td>
+        <td>4.81g</td>
+      </tr>
+      <tr>
+        <td>Milk (Whole)</td>
+        <td>1 cup</td>
+        <td>7.86g</td>
+        <td>11.03g</td>
+        <td>7.93g</td>
+      </tr>
+      <tr>
+        <td>Orange Juice</td>
+        <td>1 cup</td>
+        <td>1.74g</td>
+        <td>25.79g</td>
+        <td>0.5g</td>
+      </tr>
+      <tr>
+        <td>Apple cider</td>
+        <td>1 cup</td>
+        <td>0.15g</td>
+        <td>28.97g</td>
+        <td>0.27g</td>
+      </tr>
+      <tr>
+        <td>Yogurt (low-fat)</td>
+        <td>1 cup</td>
+        <td>12.86g</td>
+        <td>17.25g</td>
+        <td>3.8g</td>
+      </tr>
+      <tr>
+        <td>Yogurt (non-fat)</td>
+        <td>1 cup</td>
+        <td>13.01g</td>
+        <td>17.43g</td>
+        <td>0.41g</td>
+      </tr>            
+  </tbody>
+</table>
+	
+  </div>
+
+
+
+  	<!-- Site Socials and Address -->
+	<section id="site-socials" class="no-padding white-bg">
+		<div class="site-socials inner no-padding">
+			<!-- Socials -->
+			<div class="socials animated" data-animation="fadeInLeft" data-animation-delay="400">
+				
+				<!-- Instagram -->
+				<a href="#" class="social">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<!-- Linkedin -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<!-- Vimeo -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-vimeo-square"></i>
+				</a>
+				<!-- Youtube -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-youtube"></i>
+				</a>               
+				<!-- Google Plus -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-google-plus"></i>
+				</a>                
+			</div>
+			<!-- Adress, Mail -->
+			<div class="address socials animated" data-animation="fadeInRight" data-animation-delay="500">
+				<!-- Phone Number, Mail -->
+				<p>Phone: +1 (832) 588-4481 Email : <a href="mailto:kllmffe23@gmail.com" class="colored">kllmffe23@gmail.com</a> Address: 1200 post oak st, Houston, TX 77057</p>
+				<!-- Top Button -->
+				<a href="#home" class="scroll top-button">
+					<i class="fa fa-arrow-circle-up fa-2x"></i>
+				</a>
+			</div><!-- End Adress, Mail -->
+		</div><!-- End Inner -->
+	</section><!-- End Site Socials and Address -->
+  
+
+
+	
+
+  
+  
+	  
+	  <!-- Footer -->
+	  <footer id="footer" class="footer">
+		<img src="images/Totalfittracker.png" width="200" alt="Logo" />
+		<p class="copyright normal">© 2025 <span class="colored">TotalFitTracker.</span> All Rights Reserved.</p>
+	  </footer>
+	  
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.appear.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/modernizr-latest.js"></script>
+	<script type="text/javascript" src="js/SmoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.superslides.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
+	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="js/jquery.slabtext.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<script>
+       $("a.about-icon").hover(function () {
+       $(this).children("i").addClass("fa-spin");
+       }, function(){
+ 	   $(this).children("i").removeClass("fa-spin");
+       });
+
+
+
+	 /*macrocalculator javascript*/
+ 
+
+ // Switch between US and Metric Units
+document.querySelectorAll('input[name="unit"]').forEach((radio) => {
+  radio.addEventListener("change", (e) => {
+    if (e.target.value === "us") {
+      document.getElementById("us-units").style.display = "block";
+      document.getElementById("metric-units").style.display = "none";
+    } else {
+      document.getElementById("us-units").style.display = "none";
+      document.getElementById("metric-units").style.display = "block";
+    }
+  });
+});
+
+// Macro Calculation
+document.getElementById("calculate-button").addEventListener("click", () => {
+  const unit = document.querySelector('input[name="unit"]:checked').value;
+
+  let age, gender, height, weight, activity, goal;
+
+  if (unit === "us") {
+    age = parseInt(document.getElementById("us-age").value);
+    gender = document.getElementById("us-gender").value;
+    const feet = parseInt(document.getElementById("us-height-feet").value) || 0;
+    const inches = parseInt(document.getElementById("us-height-inches").value) || 0;
+    height = (feet * 30.48) + (inches * 2.54); // Convert to cm
+    weight = parseFloat(document.getElementById("us-weight").value) * 0.453592; // Convert to kg
+    activity = parseFloat(document.getElementById("us-activity").value);
+    goal = document.getElementById("us-goal").value;
+  } else {
+    age = parseInt(document.getElementById("metric-age").value);
+    gender = document.getElementById("metric-gender").value;
+    height = parseFloat(document.getElementById("metric-height").value);
+    weight = parseFloat(document.getElementById("metric-weight").value);
+    activity = parseFloat(document.getElementById("metric-activity").value);
+    goal = document.getElementById("metric-goal").value;
+  }
+
+  if (isNaN(age) || isNaN(height) || isNaN(weight)) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // BMR Calculation
+  let bmr;
+  if (gender === "male") {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+
+  // Adjust BMR based on activity level
+  let calories = bmr * activity;
+
+  // Adjust calories based on goal
+  if (goal === "deficit") {
+    calories -= 500;
+  } else if (goal === "surplus") {
+    calories += 500;
+  }
+
+  // Macro Calculation
+  const proteins = Math.round((calories * 0.3) / 4);
+  const fats = Math.round((calories * 0.25) / 9);
+  const carbs = Math.round((calories * 0.45) / 4);
+
+  // Display results
+  document.getElementById("calories").textContent = Math.round(calories);
+  document.getElementById("proteins").textContent = proteins;
+  document.getElementById("fats").textContent = fats;
+  document.getElementById("carbs").textContent = carbs;
+});
+
+// Clear Fields
+document.getElementById("clear-button").addEventListener("click", () => {
+  document.querySelectorAll("input").forEach((input) => (input.value = ""));
+  document.getElementById("macro-result").querySelectorAll("span").forEach((span) => (span.textContent = "-"));
+});
+
+
+
+
+
+
+
+
+
+
+ </script>
+ </body>
+ </html>
